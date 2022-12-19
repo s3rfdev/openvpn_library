@@ -544,7 +544,7 @@ public class OpenVPNService extends VpnService implements StateListener, Callbac
             mDeviceStateReceiver.userPause(shouldBePaused);
     }
 
-    @Override
+
     public boolean stopVPN(boolean replaceConnection) throws RemoteException {
         if (getManagement() != null)
             return getManagement().stopVPN(replaceConnection);
