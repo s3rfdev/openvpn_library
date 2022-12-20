@@ -16,7 +16,6 @@ import de.blinkt.openvpn.core.ProfileManager;
 import de.blinkt.openvpn.core.VPNLaunchHelper;
 
 public class OpenVpnApi {
-
     private static final String  TAG = "OpenVpnApi";
     @SuppressLint("SuspiciousIndentation")
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
