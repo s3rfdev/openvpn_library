@@ -78,8 +78,12 @@ public class VPNHelper extends Activity {
         startVPN();
     }
 
+    /**
+     * Stop VPN
+     */
     public void stopVPN() {
         OpenVPNThread.stop();
+        vpnStart = false;
     }
 
     private void connect() {

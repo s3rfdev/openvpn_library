@@ -225,19 +225,19 @@ public class OpenVPNService extends VpnService implements StateListener, Callbac
         return null;
     }
 
-    @Override
+
     public void addAllowedExternalApp(String packagename) throws RemoteException {
         ExternalAppDatabase extapps = new ExternalAppDatabase(OpenVPNService.this);
         extapps.addApp(packagename);
     }
 
-    @Override
+
     public boolean isAllowedExternalApp(String packagename) throws RemoteException {
         ExternalAppDatabase extapps = new ExternalAppDatabase(OpenVPNService.this);
         return extapps.checkRemoteActionPermission(this, packagename);
     }
 
-    @Override
+
     public void challengeResponse(String response) throws RemoteException {
         if (mManagement != null) {
             String b64response = Base64.encodeToString(response.getBytes(Charset.forName("UTF-8")), Base64.DEFAULT);

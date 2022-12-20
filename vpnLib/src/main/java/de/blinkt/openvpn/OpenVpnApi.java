@@ -1,14 +1,15 @@
 package de.blinkt.openvpn;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.os.RemoteException;
 import android.text.TextUtils;
-import android.util.Log;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.List;
 
 import de.blinkt.openvpn.core.ConfigParser;
 import de.blinkt.openvpn.core.ProfileManager;
@@ -17,8 +18,9 @@ import de.blinkt.openvpn.core.VPNLaunchHelper;
 public class OpenVpnApi {
 
     private static final String  TAG = "OpenVpnApi";
+    @SuppressLint("SuspiciousIndentation")
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
-    public static void startVpn(Context context, String inlineConfig, String sCountry, String userName, String pw) throws RemoteException {
+    public static void startVpn(Context context, String inlineConfig, String sCountry, String userName, String pw, List<String> bypassPackages) throws RemoteException {
         if (TextUtils.isEmpty(inlineConfig)) throw new RemoteException("config is empty");
             startVpnInternal(context, inlineConfig, sCountry, userName, pw);
     }
