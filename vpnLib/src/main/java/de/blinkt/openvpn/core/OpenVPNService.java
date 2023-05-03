@@ -325,7 +325,7 @@ public class OpenVPNService extends VpnService implements StateListener, Callbac
 
         nbuilder.setContentText(msg);
         nbuilder.setOnlyAlertOnce(true);
-        nbuilder.setOngoing(false);
+        nbuilder.setOngoing(true);
         nbuilder.setSmallIcon(R.drawable.ic_notification);
         if (status == LEVEL_WAITING_FOR_USER_INPUT) {
             PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
@@ -339,8 +339,8 @@ public class OpenVPNService extends VpnService implements StateListener, Callbac
             }
         }
 
-        if (when != 0)
-            nbuilder.setWhen(when);
+//         if (when != 0)
+//             nbuilder.setWhen(when);
 
 
         // Try to set the priority available since API 16 (Jellybean)
