@@ -1304,7 +1304,7 @@
                      humanReadableByteCount(diffOut / OpenVPNManagement.mBytecountInterval, true, getResources()));
  
  
-             showNotification(netstat, null, NOTIFICATION_CHANNEL_BG_ID1, mConnecttime, LEVEL_CONNECTED, null);
+             showNotification(netstat, null, NOTIFICATION_CHANNEL_NEWSTATUS_ID, mConnecttime, LEVEL_CONNECTED, null);
              byteIn = String.format("↓%2$s", getString(R.string.statusline_bytecount),
                      humanReadableByteCount(in, false, getResources())) + " - " + humanReadableByteCount(diffIn / OpenVPNManagement.mBytecountInterval, false, getResources()) + "/s";
              byteOut = String.format("↑%2$s", getString(R.string.statusline_bytecount),
